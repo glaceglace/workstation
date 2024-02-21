@@ -36,4 +36,4 @@ su -c "bash flatpak-apps" $SUDO_USER
 su -c "bash node" $SUDO_USER
 su -c "bash git" $SUDO_USER
 
-#todo config copyq tilix
+#todo config copyq tilix security and timeshift
