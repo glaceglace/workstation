@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "=== Configuring git ==="
+echo "============ Configuring git ============"
 read -p "Enter your user.name of git: " username
 read -p "Enter your user.email of git: " email
 git config --global user.name $username

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #flatpak apps
-echo "=== Flatpak apps ==="
+echo "============ Flatpak apps ============"
 flatpak install flathub org.videolan.VLC -y
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Ultimate -y
 flatpak install flathub com.github.eneshecan.WhatsAppForLinux -y

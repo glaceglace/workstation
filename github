@@ -1,0 +1,16 @@
+#!/bin/bash
+
+Green='\033[0;32m' 
+NC='\033[0m'
+echo "============ Installing GitHub Cli ============"
+sudo dnf install 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh
+
+echo "GitHub successfully installed!"
+echo "A login is needed to connect to your GitHub account"
+echo "To login, run:"
+echo ""
+echo -e "${Green}	gh auth login${NC}"
+echo ""
+echo "and follow the instruction"
