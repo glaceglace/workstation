@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "============ Configuring security ============"
+# ufw configuration
+sudo dnf install ufw -y
+sudo ufw limit 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
+
+# fail2ban configuration
+sudo dnf install fail2ban -y
+sudo touch /etc/fail2ban/jail.local
+sudo printf "[DEFAULT]\nignoreip = 127.0.0.1/8 ::1\nbantime = 3600\nfindtime = 600\nmaxretry = 5\n\n[sshd]\nenabled = true" | sudo tee /etc/fail2ban/jail.local
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
