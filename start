@@ -15,9 +15,6 @@ fi
 echo "============ Adding Flatpak repository ============"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-
-
-
 echo "============ Installing useful apps ============"
 # 1password
 curl https://downloads.1password.com/linux/rpm/stable/x86_64/1password-latest.rpm -o /tmp/1password.rpm
@@ -28,20 +25,21 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo dnf install code copyq tilix gnome-tweaks -y
 
+bash flatpak-apps
+bash node
+bash git
+#bash shortcuts
+bash oh-my-zsh
+bash config-tilix
+bash github
 
-su -c "bash flatpak-apps" $SUDO_USER
-su -c "bash node" $SUDO_USER
-su -c "bash git" $SUDO_USER
-#su -c "bash shortcuts" $SUDO_USER
-
-echo "============ Configure Tilix ============"
-su -c "dconf load /com/gexperts/Tilix/ < tilix.dconf" $SUDO_USER
-
-sudo bash github
-
-echo "============ Installing zsh ============"
-sudo dnf install zsh -y
-su -c "bash oh-my-zsh" $SUDO_USER
-
+Green='\033[0;32m' 
+NC='\033[0m'
+echo ""
+echo "Zsh is installed but is not your default shell yet"
+echo "Run:"
+echo -e "${Green}	chsh -s \$(which zsh)${NC}"
+echo ""
+echo "and logout to make zsh default"
 #todo config copyq tilix security and timeshift
 

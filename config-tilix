@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "============ Configure Tilix ============"
+dconf load /com/gexperts/Tilix/ < ./tilix.dconf
