@@ -20,11 +20,13 @@ echo "============ Installing useful apps ============"
 curl https://downloads.1password.com/linux/rpm/stable/x86_64/1password-latest.rpm -o /tmp/1password.rpm
 sudo dnf localinstall /tmp/1password.rpm -y
 
+
 #vscode copyq gnome-tweaks
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo dnf install code copyq tilix gnome-tweaks -y
 
+bash intellij
 bash flatpak-apps
 bash node
 bash git
