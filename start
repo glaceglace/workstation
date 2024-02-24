@@ -30,7 +30,7 @@ bash intellij
 bash flatpak-apps
 bash node
 bash git
-#bash shortcuts
+bash shortcuts
 bash oh-my-zsh
 bash config-tilix
 bash github
@@ -43,5 +43,5 @@ echo "Run:"
 echo -e "${Green}	chsh -s \$(which zsh)${NC}"
 echo ""
 echo "and logout to make zsh default"
-#todo config copyq tilix security and timeshift
+#todo config security and timeshift
 
