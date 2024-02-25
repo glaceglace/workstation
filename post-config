@@ -1,3 +1,13 @@
 #!/bin/bash
 
+# set floorp as default browser
 xdg-settings set default-web-browser one.ablaze.floorp.desktop
+
+#Remove Super+V shortcut in fedora gnome
+gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
+
+# change Alt+Tab action
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"

@@ -40,9 +40,6 @@ KEY_PATH="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
 #$BEGINNING/custom5/ command "/usr/bin/synapse"
 #$BEGINNING/custom5/ binding "<Super>R"
 
-#Remove Super+V shortcut in fedora gnome
-gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
-
 #Add customized shortcuts
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['$KEY_PATH/custom0/', '$KEY_PATH/custom1/']"
 $BEGINNING/custom1/ name "copyq"
