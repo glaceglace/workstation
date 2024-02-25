@@ -11,3 +11,9 @@ gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
+
+# fix copyq not saving item problem
+# the fix works only for autostarted copyq
+cp ~/.config/autostart/copyq.desktop ~/.config/autostart/copyq.desktop.bak
+sed "s/Exec=.*/Exec=env\ QT_QPA_PLATFORM=xcb\ copyq/g" -i ~/.config/autostart/copyq.desktop
+
