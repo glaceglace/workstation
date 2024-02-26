@@ -34,6 +34,7 @@ bash shortcuts
 bash oh-my-zsh
 bash config-tilix
 bash github
+bash post-config
 
 Green='\033[0;32m' 
 NC='\033[0m'
