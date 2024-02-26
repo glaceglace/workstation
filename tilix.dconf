@@ -1,8 +1,10 @@
 [/]
 prompt-on-close=false
 terminal-title-show-when-single=false
-terminal-title-style='small'
-window-style='borderless'
+terminal-title-style='none'
+window-style='normal'
+theme-variant='dark'
+enable-wide-handle=true
 
 [profiles]
 default='5e8fdbfc-817f-4efa-866e-5634f5cb5426'
