@@ -7,7 +7,7 @@ if [ $returnCode -eq 0 ]; then
     echo "OK"
 elif [ $returnCode -eq 100 ]; then
     echo "The OS is not updated, execute [ sudo dnf update ] and restart before running this script"
-    #exit $returnCode 
+    exit $returnCode 
 else 
     echo "Error verifying OS, execute [ sudo dnf check-update ] to see details"
     exit $returnCode
